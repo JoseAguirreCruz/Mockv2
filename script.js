@@ -54,4 +54,18 @@ $(".hamburger-menu").click(function() {
         $(this).parent('.dropdown').toggleClass('active');
     });
 
+        // JavaScript for adding interactive hover effect to the video container
+        var videoContainer = document.querySelector('.video-container');
+        if (videoContainer) { // Ensure videoContainer is not null before adding event listeners
+            videoContainer.addEventListener('mouseover', function() {
+                this.style.border = '4px solid white';
+            });
+    
+            videoContainer.addEventListener('mouseout', function() {
+                this.style.border = '2px solid white';
+            });
+        } else {
+            console.error("Couldn't find .video-container element");
+        }
+
 });
