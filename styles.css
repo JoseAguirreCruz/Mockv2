@@ -287,20 +287,34 @@ nav {
 
 .card {
   display: flex; 
-  background-color: #ff00005b;
+  background: linear-gradient(-45deg, #ff0000, #000000, #ff0000, #000000);
+  background-size: 400% 400%;
   color: white;
   border-radius: 10px;
   overflow: hidden; 
   height: 200px; 
   position: relative; 
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: gradientBG 15s ease infinite;
 }
-
-
 
 .card:hover {
-  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* White color shadow with 80% opacity */
+  box-shadow: 0 0 20px #fff; 
+  transform: scale(1.05);
 }
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
 
 .card-image {
   flex-basis: 20%; 
