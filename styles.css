@@ -448,7 +448,7 @@ footer {
   color: white;
   padding: 20px 0; 
   text-align: center; 
-  border-top:1.5px solid white; /* Change '3px' to alter the thickness of the line */
+  border-top:1.5px solid white;
   padding-top: 20px;
 }
 
@@ -485,7 +485,7 @@ footer {
   background-color: #000;
   border-top: 2px solid white;
   position: relative;
-  overflow: hidden; /* Ensures that the animated elements don't overflow the container */
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -495,7 +495,7 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Places the background behind your content */
+  z-index: -1; 
 }
 
 .section-content {
@@ -507,17 +507,17 @@ footer {
 .right-content {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Aligns children elements (content) vertically in the middle */
-  align-items: center; /* Aligns children elements (content) horizontally in the middle */
-  text-align: center; /* Aligns the text inside the children elements to the center */
-  height: 100%; /* Takes full height of the parent */
-  color: white; /* Your existing color styling */
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  height: 100%; 
+  color: white; 
 }
 
 .ball {
   position: absolute;
   border-radius: 50%;
-  background: rgba(193, 27, 27, 0.7); /* You can change the color and opacity */
+  background: rgba(193, 27, 27, 0.7); 
   animation: floatAnimation 6s infinite ease-in-out;
   width: 15px;
   height: 15px;
@@ -538,7 +538,7 @@ footer {
 
 .left-content, 
 .right-content {
-  position: relative; /* Ensure these are above the animated background */
+  position: relative; 
   z-index: 2;
   width: 49%;
   box-sizing: border-box;
