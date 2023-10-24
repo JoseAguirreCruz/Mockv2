@@ -68,4 +68,25 @@ $(".hamburger-menu").click(function() {
             console.error("Couldn't find .video-container element");
         }
 
+        createAnimatedBackground();
+
 });
+
+function createAnimatedBackground() {
+  var animatedBackground = document.getElementById('animated-background');
+  if (!animatedBackground) {
+      console.error("Couldn't find #animated-background element");
+      return;
+  }
+  
+  var numOfBalls = 50; // Number of balls you want to show
+
+  for (var i = 0; i < numOfBalls; i++) {
+      var ball = document.createElement("div");
+      ball.className = 'ball';
+      ball.style.left = Math.random() * 100 + "vw";
+      ball.style.top = Math.random() * 100 + "vh";
+      ball.style.animationDelay = Math.random() * 2 + "s";
+      animatedBackground.appendChild(ball);
+  }
+}
