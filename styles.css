@@ -402,6 +402,8 @@ footer {
   color: white;
   padding: 20px 0; 
   text-align: center; 
+  border-top:1.5px solid white; /* Change '3px' to alter the thickness of the line */
+  padding-top: 20px;
 }
 
 .footer-content h2 {
