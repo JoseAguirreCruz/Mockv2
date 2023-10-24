@@ -209,7 +209,7 @@ nav {
 
 
 
-.video-container {
+.video-container-main {
   position: absolute;
   top: 0;
   left: 0;
@@ -397,6 +397,7 @@ nav {
 }
 
 .join-button {
+  top: 1rem;
   align-items: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #cb8f8f 0, #ff5454 100%);
@@ -479,11 +480,119 @@ footer {
   }
 }
 
+.split-section {
+  padding: 50px 0;
+  background-color: #000;
+  border-top: 2px solid white;
+}
 
+.section-content {
+  display: flex;
+  align-items: start;
+  padding: 0 2%;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Aligns children elements (content) vertically in the middle */
+  align-items: center; /* Aligns children elements (content) horizontally in the middle */
+  text-align: center; /* Aligns the text inside the children elements to the center */
+  height: 100%; /* Takes full height of the parent */
+  color: white; /* Your existing color styling */
+}
+
+.left-content, 
+.right-content {
+  width: 49%;
+  box-sizing: border-box;
+}
+
+.left-content {
+  padding-right: 2%;
+  border-right: 2px solid white;
+  text-align: center;
+}
+
+.right-content {
+  padding-left: 2%;
+  color: white;
+}
+
+.video-container {
+  position: relative;
+  height: 315px;
+  overflow: hidden;
+  max-width: 90%;
+  margin: 0 auto;
+  border: 2px solid white;
+  transition: border 0.5s;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.join-button {
+  display: inline-block;
+  font-size: 1.2em;
+  color: white;
+  background-color: #ff0000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+
+  .video-title {
+    font-size: 18px; 
+  }
+
+  .video-title span {
+    font-size: 24px; 
+  }
+
+  .info-section .main-heading {
+    font-size: 24px; 
+    margin: 10px 0;
+  }
+
+  .info-section .sub-heading {
+    font-size: 18px; 
+    margin: 10px 0; 
+  }
+
+  .section-content {
+    flex-direction: column;
+  }
+
+  .right-content {
+    padding-top: 2rem !important;
+  }
+
+  .left-content, 
+  .right-content {
+    width: 100%;
+    padding: 0;
+    border-right: none;
+    border-bottom: 2px solid white; 
+  }
+
+  .left-content {
+    border-bottom: none; 
+  }
+
+  .video-container {
+    width: 100%; 
+    max-width: none;
+  }
 
   .logo-section {
       flex-direction: column;
@@ -520,13 +629,52 @@ footer {
     text-decoration: none;
 }
 
+.cards-section {
+  padding: 10px; 
+}
+
+.card-grid {
+  width: 100%; 
+}
+
 .card {
-  width: calc((100% / 2) - 40px); 
+  flex-direction: column; 
+  height: auto; 
+}
+
+.card-image,
+.card-content {
+  flex-basis: 100%; 
 }
 }
 
 @media screen and (max-width: 600px) {
-.card {
-  width: calc(100% - 40px); 
+  .card {
+    width: calc(100% - 20px); 
+    margin: 10px auto; 
+  }
 }
+
+@media screen and (max-width: 480px) {
+
+  .video-title {
+    font-size: 12px; 
+  }
+
+  .video-title span {
+    font-size: 16px; 
+  }
+
+  .info-section .main-heading {
+    font-size: 18px;
+  }
+
+  .info-section .sub-heading {
+    font-size: 16px;
+  }
+
+  .card {
+    width: calc(100% - 10px); 
+    margin: 5px auto; 
+  }
 }
