@@ -272,99 +272,95 @@ nav {
 }
 
 .cards-section {
-  background-color: #000000; 
+  background-color: #000000;
   padding: 20px;
-}
-
-.card-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px; 
   justify-content: center;
 }
 
+.card-grid {
+  width: 70%; /* Adjust card grid to 70% of its container width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .card {
-  background-color: #ff0000;
-  color: white; 
-  border-radius: 10px; 
+  display: flex; /* Make card horizontal */
+  background-color: #ff00005b;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure the border radius affects inner elements */
+  height: 200px; /* Fixed height for all cards */
+  position: relative; /* Relative positioning for inner absolute elements */
+}
+
+.card-image {
+  flex-basis: 20%; /* Image section takes 20% */
+  position: relative; /* For overlaying text */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the whole area */
+}
+
+.card-image .card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+}
+
+.card-content {
+  flex-basis: 80%; /* Content section takes 80% */
   padding: 20px;
-  width: calc((100% / 3) - 40px); 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push button to the bottom */
+}
+
+.read-more {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.05); 
-  box-shadow: 0px 0px 15px 5px rgb(255, 255, 255), 0px 0px 20px 10px rgba(0, 0, 0, 0.9);
-}
-
-.card-title {
-  font-family: 'Gotham', sans-serif;
-  margin-bottom: 10px; 
-  display: inline-block; 
-  perspective: 1000px; 
-  transition: font-size 0.6s;
-}
-
-.card:hover .card-title { 
-  animation: flip 0.6s, resizeFont 0.6s forwards; 
-  box-shadow: 0px 0px 10px rgb(255, 255, 255); 
-}
-
-@keyframes flip {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes resizeFont {
-  0% { font-size: larger; } 
-  100% { font-size: smaller; }
-}
-
-.card-list {
-  list-style: none; 
-  padding-left: 20px; 
-}
-
-.card-list li:before {
-  content: "\2022"; 
-  color: #fff;  
-  font-weight: bold;
+  color: #41403e;
+  cursor: pointer;
   display: inline-block;
-  width: 1em; 
-  margin-left: -1em; 
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.card-list li {
-  transition: background-color 0.3s, color 0.3s;
+.read-more:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
 }
 
-.card-list li:hover {
-  background-color: white; 
-  color: #000000; 
-  border-radius: 15px;
-  padding: 5px 10px; 
-  cursor: pointer; 
-  padding-left: 5px;
+.read-more:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
-/* Optional: Add space between list items */
-.card-list li + li {
-  margin-top: 10px;
-}
-
-
-
-.card-description {
-  font-family: 'Gotham', sans-serif;
-  font-weight: 700;
-}
 
 footer {
   background-color: #000000;
@@ -374,7 +370,7 @@ footer {
 }
 
 .footer-content h2 {
-  font-family: 'Playpen Sans', sans-serif;
+  font-family: 'Gotham', sans-serif;
 }
 
 .footer-content p, .footer-content .socials {
@@ -383,7 +379,7 @@ footer {
 }
 
 .footer-content a {
-  color: gold; 
+  color: rgb(255, 0, 0); 
   text-decoration: none; 
 }
 
