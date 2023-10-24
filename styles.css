@@ -279,31 +279,41 @@ nav {
 }
 
 .card-grid {
-  width: 70%; /* Adjust card grid to 70% of its container width */
+  width: 70%; 
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .card {
-  display: flex; /* Make card horizontal */
+  display: flex; 
   background-color: #ff00005b;
   color: white;
   border-radius: 10px;
-  overflow: hidden; /* Ensure the border radius affects inner elements */
-  height: 200px; /* Fixed height for all cards */
-  position: relative; /* Relative positioning for inner absolute elements */
+  overflow: hidden; 
+  height: 200px; 
+  position: relative; 
 }
 
 .card-image {
-  flex-basis: 20%; /* Image section takes 20% */
-  position: relative; /* For overlaying text */
+  flex-basis: 20%; 
+  position: relative; 
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the whole area */
+  object-fit: cover; 
+}
+
+.card-image .overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(80, 80, 80, 0.5); 
+  z-index: 1;
 }
 
 .card-image .card-title {
@@ -311,14 +321,16 @@ nav {
   bottom: 10px;
   left: 10px;
   margin: 0;
+  z-index: 2; 
 }
 
+
 .card-content {
-  flex-basis: 80%; /* Content section takes 80% */
+  flex-basis: 80%; 
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Push button to the bottom */
+  justify-content: space-between; 
 }
 
 .read-more {
@@ -387,14 +399,11 @@ footer {
   text-decoration: underline; 
 }
 
-/* Existing CSS ... */
-
 @media screen and (max-width: 1024px) and (min-width: 769px) {
   .more-dropdown {
-    display: block !important; /* Override inline 'display: none;' */
+    display: block !important; 
   }
 
-  /* Hide the items that are now in the "More" dropdown */
   .nav-links > li:nth-child(n+6):nth-child(-n+9) {
     display: none;
   }
@@ -442,12 +451,12 @@ footer {
 }
 
 .card {
-  width: calc((100% / 2) - 40px); /* Adjust width for smaller screens, 2 cards in a row */
+  width: calc((100% / 2) - 40px); 
 }
 }
 
 @media screen and (max-width: 600px) {
 .card {
-  width: calc(100% - 40px); /* Adjust width for mobile screens, 1 card in a row */
+  width: calc(100% - 40px); 
 }
 }
