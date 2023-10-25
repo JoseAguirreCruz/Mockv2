@@ -286,6 +286,87 @@ nav {
   font-size: 30px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background: linear-gradient(-45deg, #ff0000, #000000, #ff0000, #000000);
+  background-size: 400% 400%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+
+.modal-title {
+  margin-top: 10px;
+}
+
+.modal-header {
+  position: relative; 
+  padding: 0; 
+  border: none;
+}
+
+.modal-header img {
+  width: 100%; 
+  vertical-align: top; 
+}
+
+.modal-title {
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #fff; 
+  text-align: center; 
+  padding: 10px; 
+  box-sizing: border-box;
+}
+
+.modal-body {
+  padding: 20px; 
+}
+
+
+.close-modal {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 .cards-section {
   background-color: #000000;
   padding: 20px;
@@ -585,22 +666,23 @@ footer {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
 
+  .modal-content {
+    width: 90%; 
+    max-width: none;
+  }
+  
+  .modal-title, .modal-body, .close-modal {
+    padding: 10px;
+  }
+
   .video-title {
-    font-size: 1rem !important; /* Smaller font size for smaller screens */
+    font-size: 1rem !important; 
     padding: 0.5rem !important; 
   }
 
   .video-title span[style] {
-    font-size: 22px !important; /* Adjusted font size for the span */
+    font-size: 22px !important; 
   }
-
-  /* .video-title {
-    font-size: 18px; 
-  }
-
-  .video-title span {
-    font-size: 24px; 
-  } */
 
   .info-section .main-heading {
     font-size: 24px; 
@@ -700,22 +782,28 @@ footer {
 
 @media screen and (max-width: 480px) {
 
+  .modal-content {
+    padding: 10px;
+  }
+  
+  .modal-title {
+    font-size: 18px;
+  }
+  
+  .close-modal {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
   .video-title {
-    font-size: 1rem !important; /* Even smaller font size for very small screens */
+    font-size: 1rem !important; 
     padding: 0.5rem !important;
   }
 
   .video-title span[style] {
-    font-size: 16px !important; /* Adjusted font size for the span */
+    font-size: 16px !important; 
   }
 
-  /* .video-title {
-    font-size: 12px; 
-  }
-
-  .video-title span {
-    font-size: 16px; 
-  } */
 
   .info-section .main-heading {
     font-size: 18px;
