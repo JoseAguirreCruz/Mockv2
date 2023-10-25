@@ -93,7 +93,7 @@ nav {
 
 .nav-links .dropdown.active > a {
   background-color: #f1f1f1; 
-  color: #003f5c; 
+  color: #000000; 
   border-radius: 15px; 
   padding: 10px 20px; 
 }
