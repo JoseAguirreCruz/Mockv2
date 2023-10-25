@@ -645,12 +645,15 @@ footer {
 
 .ball {
   position: absolute;
-  border-radius: 50%;
-  background: rgba(193, 27, 27, 0.7); 
   animation: floatAnimation 6s infinite ease-in-out;
-  width: 15px;
-  height: 15px;
+  width: 32px;  /* Adjust the width as per your image's aspect ratio */
+  height: 32px; /* Adjust the height as per your image's aspect ratio */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('MCJROTC2.png'); /* Update with the path to your PNG image */
 }
+
 
 @keyframes floatAnimation {
   from {
