@@ -185,14 +185,14 @@ nav {
 
 .video-title {
   color: #fff;
-  font-size: 2.5rem; /* Adjusted to rem for scalability */
+  font-size: 2.5rem; 
   margin: 1rem 0 0;
   padding: 1rem;
   border-radius: 5px;
   white-space: nowrap;
   text-align: center;
   font-family: 'Playpen Sans', sans-serif;
-  overflow: hidden; /* Added to prevent text overflow */
+  overflow: hidden; 
 }
 
 .title-section {
