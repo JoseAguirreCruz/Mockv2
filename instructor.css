@@ -74,7 +74,68 @@
     border-radius: 10px;
   }
 
-
+  .instructor-section {
+    text-align: center;
+    padding: 70px 0;
+    background-color: #000000; 
+  }
+  
+  .instructor-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff; 
+  }
+  
+  .instructor-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+  }
+  
+  .instructor-card {
+    color: #ffffff;
+    background: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 50vh;
+    border: 2px solid red; /* Set the border color to red */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+  }
+  
+  .instructor-card:hover {
+    transform: scale(1.05); /* Make the card slightly larger */
+    box-shadow: 0 0 20px red; /* Add a red glow effect */
+  }
+  
+  
+  
+  .instructor-card-image {
+    height: 75%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .instructor-card-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .instructor-card-description {
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+  }
+  
+  @media (max-width: 768px) {
+    .instructor-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
 
 
   @media (max-width: 768px) {
