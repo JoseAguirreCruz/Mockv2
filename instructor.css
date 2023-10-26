@@ -1,0 +1,93 @@
+.video-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .video-title-i {
+    color: #ecf0f1;
+    font-size: 1.5vw !important;
+    margin-bottom: 3vw !important;
+    font-family: 'Hagrid', sans-serif !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+  
+  
+  
+  .tv-frame {
+    position: relative;
+    display: inline-block;
+    width: 80vw;
+    max-width: 640px;
+    height: 45vw;
+    max-height: 360px;
+    background-color: #ecf0f1;
+    border-radius: 36px;
+    padding: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tv-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+  
+  .youtube-video {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .antenna-left, .antenna-right {
+    position: absolute;
+    bottom: 88%;
+    width: 0.5vw;
+    max-width: 4px;
+    height: 9vw;
+    max-height: 75px;
+    background-color: #ecf0f1;
+  }
+  
+  .antenna-left {
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  
+  .antenna-right {
+    right: 50%;
+    transform: translateX(50%) rotate(45deg);
+  }
+  
+  .tv-stand {
+    position: absolute;
+    bottom: -20px; 
+    left: 50%;
+    width: 18vw;
+    max-width: 120px;
+    height: 3vw;
+    max-height: 20px;
+    background-color: #ecf0f1;
+    transform: translateX(-50%);
+    border-radius: 10px;
+  }
+
+
+
+
+  @media (max-width: 768px) {
+    .video-title-i {
+        font-size: 16px !important;  
+      }
+
+    .antenna-left, .antenna-right {
+      bottom: 88%; 
+    }
+  
+    .tv-stand {
+      bottom: -10px; 
+    }
+  }
+  
