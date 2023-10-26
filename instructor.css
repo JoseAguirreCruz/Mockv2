@@ -139,6 +139,111 @@
     padding: 0 15px 15px;
     font-size: 0.9em;
   }
+
+  .qualification-section {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden; 
+  }
+  
+  .qualification-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .qualification-card {
+    border: 2px solid red;
+    color: #fff;
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .qualification-image-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  .qualification-image {
+    margin-top: 10%;
+    margin-left: 100% !important;
+    width: 200%;
+    height: auto;
+  }
+
+  .qualification-image-l {
+    width: 100%;
+    height: auto;
+  }
+  
+  .qualification-overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150%;
+    height: auto; /* Adjusted to auto to allow the box to expand with the content */
+    max-height: 16rem; /* You can set a max height if you want */
+    background-color: rgba(72, 67, 67, 0.653);
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1.2rem; /* Reduced font size */
+  }
+  
+  .qualification-overlay ol {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .qualification-overlay li {
+    list-style-position: inside;
+  }
+  
+  .qualification-overlay-i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220%;
+    height: auto; /* Adjusted to auto to allow the box to expand with the content */
+    max-height: 24rem; /* You can set a max height if you want */
+    background-color: rgba(72, 67, 67, 0.653);
+    color: #ffffff;
+    padding: 10px;
+    margin-left: -3rem;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1.2rem; /* Reduced font size */
+  }
+  
+  .qualification-overlay-i ol {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .qualification-overlay-i li {
+    list-style-position: inside;
+  }
+  
+  
+  
+  .qualification-image-container.left .qualification-overlay {
+    right: -80%;
+  }
+  
+  .qualification-image-container.right .qualification-overlay {
+    left: -40%;
+  }
+  
+  .qualification-image-container.right {
+    float: right;
+  }
+
+  
   
   @media (max-width: 768px) {
     .instructor-cards {
