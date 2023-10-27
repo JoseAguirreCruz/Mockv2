@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+    // Fade-in effect as user scrolls
+    function checkScroll() {
+        $('.qualification-image-container').each(function () {
+            var bottomOfObject = $(this).offset().top + $(this).outerHeight();
+            var bottomOfWindow = $(window).scrollTop() + $(window).height();
+
+            if (bottomOfWindow > bottomOfObject) {
+                $(this).addClass('fade-in-element');
+            }
+        });
+    }
+
+    $(window).scroll(checkScroll);
+    checkScroll();
+
     function adjustNav() {
         var windowWidth = $(window).width();
         if (windowWidth <= 1024 && windowWidth >= 769) {
