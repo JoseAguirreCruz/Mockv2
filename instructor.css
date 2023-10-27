@@ -270,3 +270,55 @@
     }
   }
   
+
+  @media only screen and (max-width: 768px) {
+    .qualification-image-container {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .qualification-image {
+      margin-top: 0;
+      width: 100%;
+    }
+  
+    .qualification-overlay,
+    .qualification-overlay-i {
+      position: static;
+      width: 100%;
+      transform: none;
+      margin-top: 10px;
+      overflow-y: auto;
+    }
+  
+    .qualification-overlay-i {
+      margin-left: 0;
+    }
+  
+    .image-title, .image-title-i {
+      position: static;
+      width: auto;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .qualification-title {
+      font-size: 1.2em;
+    }
+  
+    .qualification-card {
+      font-size: 0.9rem;
+    }
+  
+    .qualification-overlay,
+    .qualification-overlay-i {
+      padding: 5px;
+      font-size: 0.9rem;
+    }
+  
+    .image-title, .image-title-i {
+      font-size: 0.9rem;
+    }
+  }
