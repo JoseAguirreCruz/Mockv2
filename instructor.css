@@ -244,34 +244,26 @@
   .qualification-image-container.right {
     float: right;
   }
-
-  
-  
-  @media (max-width: 768px) {
-    .instructor-cards {
-      grid-template-columns: 1fr;
-    }
-  }
-  
   
 
+  @media only screen and (max-width: 768px) {
 
-  @media (max-width: 768px) {
     .video-title-i {
-        font-size: 16px !important;  
-      }
+      font-size: 16px !important;  
+    }
 
     .antenna-left, .antenna-right {
       bottom: 88%; 
     }
-  
+
     .tv-stand {
       bottom: -10px; 
     }
-  }
-  
 
-  @media only screen and (max-width: 768px) {
+    .instructor-cards {
+      grid-template-columns: 1fr;
+    }
+
     .qualification-image-container {
       width: 100%;
       text-align: center;
