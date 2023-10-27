@@ -170,8 +170,7 @@
   
   .qualification-image {
     margin-top: 10%;
-    margin-left: 100% !important;
-    width: 200%;
+    width: 100%;
     height: auto;
   }
 
@@ -206,20 +205,31 @@
   }
   
   .qualification-overlay-i {
-    width: 220%;
+    margin-top: 2rem;
+    width: 150%;
     max-height: 24rem;
-    margin-left: -3rem;
+    margin-left: -26rem;
   }
-  
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .qualification-overlay, .qualification-overlay-i {
-      font-size: 1rem; /* Adjusted font size */
-      padding: 5px; /* Adjusted padding */
-    }
+
+  .image-title {
+    position: absolute;
+    top: 10%;
+    left: 110%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    width: 400px;
   }
-  
+
+  .image-title-i {
+    position: absolute;
+    top: 15%;
+    right: 110%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    width: 400px;
+  }
   
   
   
