@@ -343,6 +343,102 @@
   .application-title {
     margin-bottom: 25px; 
   }
+
+
+
+
+  .review-section {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .review-carousel {
+    display: flex;
+    white-space: nowrap;
+    animation-play-state: running;
+    animation-timing-function: linear;
+  }
+  
+  .review-card {
+    color: #fff;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    width: 400px !important; 
+    flex-shrink: 0;
+    height: 200px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    border: 2px solid red;
+    box-sizing: border-box;
+  }
+  
+  .review-text, .user-name, .user-position {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .review-text {
+    margin-top: 10px;
+    font-style: italic;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 4.2em; 
+    line-height: 1.4;
+  }
+  
+  .user-info {
+    display: flex;
+    margin-top: 10px;
+    align-items: center; 
+  }
+  
+  .review-card.expanded {
+    transform: scale(1.1);
+  }
+  
+  .review-icon {
+    font-size: 24px;
+    color: #ff9900;
+  }
+  
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .user-details {
+    margin-left: 10px;
+  }
+  
+  .user-position {
+    color: #ff0000;
+  }
+  
+  .user-name, .user-position {
+    margin: 0;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
   
   
 
