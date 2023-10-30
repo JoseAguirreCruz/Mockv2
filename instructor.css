@@ -276,11 +276,11 @@
   }
   
   .qualification-image-container.left.fade-in-element {
-    animation: fadeInFromRight 1s forwards;
+    animation: fadeInFromRight 0.5s forwards;
   }
   
   .qualification-image-container.right.fade-in-element {
-    animation: fadeInFromLeft 1s forwards;
+    animation: fadeInFromLeft 0.5s forwards;
   }
   
   
