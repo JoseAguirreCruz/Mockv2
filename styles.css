@@ -384,19 +384,21 @@ nav {
 
 .card {
   display: flex; 
-  background: linear-gradient(-45deg, #ff0000, #000000, #ff0000, #000000);
+  background: linear-gradient(-45deg, #ff000050, #000000, #ff00004b, #000000);
   background-size: 400% 400%;
   color: white;
+  border: 2px solid red;
   border-radius: 10px;
   overflow: hidden; 
   height: 200px; 
   position: relative; 
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   animation: gradientBG 15s ease infinite;
+  margin-bottom: 20px;
 }
 
 .card:hover {
-  box-shadow: 0 0 20px #fff; 
+  box-shadow: 0 0 20px #ff0000; 
   transform: scale(1.05);
 }
 
