@@ -106,3 +106,30 @@ function createAnimatedBackground() {
         animatedBackground.appendChild(ball);
     }
 }
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('video-iframe', {
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+
+function onPlayerReady(event) {
+    player.playVideo();
+  
+    var muteBtn = document.getElementById('muteBtn');
+    muteBtn.innerText = 'Unmute'; 
+    muteBtn.addEventListener('click', function() {
+      if (player.isMuted()) {
+        player.unMute();
+        muteBtn.innerText = 'Mute';
+      } else {
+        player.mute();
+        muteBtn.innerText = 'Unmute';
+      }
+    });
+  }
+  
+  

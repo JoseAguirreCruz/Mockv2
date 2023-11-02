@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@600&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="script.js"></script>
 </head>
 
@@ -96,14 +97,18 @@
 
   <section class="video-section"> 
     <div class="video-container-main">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Q7s7L7dnQnU?autoplay=1&mute=1&si=QHpsfLu2DCNs9MPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-iframe"></iframe>
+      <iframe id="video-iframe" width="100%" height="315" src="https://www.youtube.com/embed/Q7s7L7dnQnU?autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-iframe"></iframe>
       </iframe>
       <div class="video-overlay"></div>
     </div>
   </section>
 
   <section class="title-section">
-    <h2 class="video-title">
+    <div style="bottom: 5rem !important;" class="audio-control">
+      <span class="audio-label">Audio:</span>
+      <button id="muteBtn" class="mute-button">Mute</button>
+    </div>
+    <h2 style="margin-bottom: 10px;" class="video-title">
       <span class="hoverable">D</span><span class="hoverable">a</span><span class="hoverable">r</span><span class="hoverable">e</span> 
       <span class="hoverable">t</span><span class="hoverable">o</span> 
       <span class="hoverable">L</span><span class="hoverable">e</span><span class="hoverable">a</span><span class="hoverable">d</span><span class="hoverable">.</span> 
@@ -111,6 +116,7 @@
       <span style="font-size: 46px; font-family: 'Hagrid'; color: #FF0000;">Tomorrow.</span>
     </h2>
   </section>
+  
   
 
   <section class="info-section">
