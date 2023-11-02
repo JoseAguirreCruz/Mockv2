@@ -17,10 +17,10 @@
   .tv-frame {
     position: relative;
     display: inline-block;
-    width: 80vw;
-    max-width: 640px;
+    width: 60vw;
+    max-width: 100vw;
     height: 45vw;
-    max-height: 360px;
+    max-height: 100vh;
     background-color: #ecf0f1;
     border-radius: 36px;
     padding: 16px;
@@ -43,21 +43,21 @@
 
   .antenna-left, .antenna-right {
     position: absolute;
-    bottom: 88%;
+    bottom: 93%;
     width: 0.5vw;
     max-width: 4px;
-    height: 9vw;
-    max-height: 75px;
+    height: 5vw;
+    max-height: 100vh;
     background-color: #ecf0f1;
   }
   
   .antenna-left {
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%) rotate(-45deg);
   }
   
   .antenna-right {
-    right: 50%;
+    right: 45%;
     transform: translateX(50%) rotate(45deg);
   }
   
@@ -475,7 +475,7 @@
     }
 
     .antenna-left, .antenna-right {
-      bottom: 88%; 
+      bottom: 95%; 
     }
 
     .tv-stand {
