@@ -199,7 +199,10 @@ nav {
   text-align: center;
 }
 
+/* Laurel - Regular font for dare to lead */
+
 .hoverable {
+  font-family: 'Gotham', sans-serif;
   display: inline-block;
   transition: transform 0.3s, color 0.3s;
 }
