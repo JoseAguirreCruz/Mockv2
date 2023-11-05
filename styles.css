@@ -625,7 +625,8 @@ nav {
   height: 30px;
   font-size: 16px;
   background: transparent;
-  border: none;
+  border: 2px solid red;
+  border-radius: 10px;
   position: relative;
   color: #f0f0f0;
   cursor: pointer;
@@ -651,11 +652,14 @@ nav {
   transition: all .4s;
 }
 
+.join-button:hover {
+  box-shadow: 0 0 8px red;
+}
+
 .join-button::before {
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #28282d;
   border-radius: 10px;
 }
 
