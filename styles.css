@@ -450,25 +450,22 @@ nav {
 
 .card {
   width: calc(50% - 10px);
-  display: flex; 
+  display: flex;
+  flex-direction: column;
   background: #000;
   background-size: 400% 400%;
   color: white;
   border: 2px solid red;
   border-radius: 10px;
-  overflow: hidden; 
-  height: 225px; 
-  position: relative; 
+  overflow: hidden;
+  min-height: 225px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   animation: gradientBG 15s ease infinite;
   margin: 10px 0;
 }
 
-
-
-
 .card:hover {
-  box-shadow: 0 0 20px #ff0000; 
+  box-shadow: 0 0 20px #ff0000;
   transform: scale(1.05);
 }
 
@@ -484,26 +481,27 @@ nav {
   }
 }
 
-
 .card-image {
-  flex-basis: 20%; 
-  position: relative; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
 }
 
 .card-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
+  height: auto;
+  object-fit: cover;
   transition: transform 1s;
 }
 
 .card-image .overlay {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  background-color: rgba(80, 80, 80, 0.5); 
+  background-color: rgba(80, 80, 80, 0.5);
   z-index: 1;
   transition: top 0.6s;
 }
@@ -513,46 +511,36 @@ nav {
   bottom: 10px;
   left: 10px;
   margin: 0;
-  z-index: 2; 
+  z-index: 2;
+  color: #fff;
+  /* background: rgba(0, 0, 0, 0.5); */
+  padding: 0.5em;
+  max-width: calc(100% - 20px);
 }
 
-
 .card-content {
-  flex-basis: 80%; 
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .read-more {
   align-self: center;
+  margin-top: auto;
   background-color: #fff;
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-  box-sizing: border-box;
   color: #41403e;
   cursor: pointer;
-  display: inline-block;
   font-family: Neucha, sans-serif;
   font-size: 1rem;
   line-height: 23px;
-  outline: none;
   padding: .75rem;
-  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
@@ -564,6 +552,20 @@ nav {
 .read-more:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
+
+/* Responsive adjustments for height */
+@media (min-height: 1400px) {
+  .card {
+    height: auto; /* Allows the card to grow with content */
+  }
+  .card-content {
+    justify-content: flex-start; /* Aligns content to the top */
+  }
+  .read-more {
+    margin-top: 20px; /* Ensures there is space above the button */
+  }
+}
+
 
 .join-button {
   top: 1rem;
