@@ -330,21 +330,24 @@ nav {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+  overflow-y: auto; 
 }
 
 .modal-content {
-  position: fixed;
+  position: relative; 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 600px;
+  min-height: 100px; 
   background: linear-gradient(-45deg, #ff0000, #000000, #ff0000, #000000);
   background-size: 400% 400%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   animation: gradientBG 15s ease infinite;
+  overflow: hidden; 
 }
 
 @keyframes gradientBG {
@@ -359,38 +362,39 @@ nav {
   }
 }
 
-
 .modal-title {
   margin-top: 10px;
 }
 
 .modal-header {
-  position: relative; 
-  padding: 0; 
+  position: relative;
+  padding: 0;
   border: none;
 }
 
 .modal-header img {
-  width: 100%; 
-  vertical-align: top; 
+  width: 100%;
+  height: auto; 
+  vertical-align: top;
 }
 
 .modal-title {
-  position: absolute; 
-  bottom: 0; 
+  position: absolute;
+  bottom: 0;
   left: 0;
-  width: 100%; 
-  background: rgba(0, 0, 0, 0.5); 
-  color: #fff; 
-  text-align: center; 
-  padding: 10px; 
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .modal-body {
-  padding: 20px; 
+  padding: 20px;
+  max-height: 70vh; 
+  overflow-y: auto; 
 }
-
 
 .close-modal {
   background-color: #000000;
@@ -400,6 +404,28 @@ nav {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+  }
+  .modal-body {
+    padding: 10px;
+  }
+  .close-modal {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-height: 300px) {
+  .modal-content {
+    top: 10%; 
+    transform: translate(-50%, 0);
+    margin-top: 20px; 
+  }
+}
+
 
 
 /* .cards-section {
