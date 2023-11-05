@@ -904,3 +904,17 @@ footer {
     margin: 5px auto; 
   }
 }
+
+/* Media Query for smaller pixels (laptops) */
+@media (max-width: 640px) {
+  .modal-title, .modal-body, .close-modal {
+    font-size: 0.8em; 
+  }
+  .modal-content {
+    padding: 5px; 
+  }
+  .modal-header img {
+    height: 150px; 
+    object-fit: cover; 
+  }
+}
