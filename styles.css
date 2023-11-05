@@ -591,9 +591,13 @@ nav {
 }
 
 .read-more:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  color: rgb(255, 0, 0);            
+  box-shadow:              
+    0 0 10px red,          
+    rgba(0, 0, 0, 0.3) 2px 8px 8px -5px; 
   transform: translate3d(0, 2px, 0);
 }
+
 
 .read-more:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
