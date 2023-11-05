@@ -554,19 +554,40 @@ nav {
 .read-more {
   align-self: center;
   margin-top: auto;
-  background-color: #fff;
-  color: #41403e;
+  background-color: black; 
+  color: white; 
   cursor: pointer;
   font-family: Neucha, sans-serif;
   font-size: 1rem;
-  line-height: 23px;
-  padding: .75rem;
-  border: none;
-  border-radius: 15px;
+  line-height: 1;
+  padding: .75rem 4rem .75rem .75rem; 
+  border: 2px solid red; 
+  border-radius: 30px; 
   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   transition: all 235ms ease-in-out;
   user-select: none;
   touch-action: manipulation;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Styles for the circle image with red background */
+.read-more::after {
+  content: '';
+  background: red;
+  background-image: url('MCJROTC2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: -20px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px; 
+  height: 60px;
+  border-radius: 50%;
 }
 
 .read-more:hover {
@@ -578,16 +599,18 @@ nav {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
+
+
 /* Responsive adjustments for height */
 @media (min-height: 1400px) {
   .card {
-    height: auto; /* Allows the card to grow with content */
+    height: auto; 
   }
   .card-content {
-    justify-content: flex-start; /* Aligns content to the top */
+    justify-content: flex-start; 
   }
   .read-more {
-    margin-top: 20px; /* Ensures there is space above the button */
+    margin-top: 20px; 
   }
 }
 
