@@ -553,7 +553,7 @@ nav {
 
 .read-more {
   align-self: center;
-  margin-top: auto;
+  margin-top: 1rem;
   background-color: black; 
   color: white; 
   cursor: pointer;
@@ -895,7 +895,7 @@ footer {
 }
 
 .cards-section {
-  padding: 10px; 
+  padding: 1px; 
 }
 
 .card-grid {
