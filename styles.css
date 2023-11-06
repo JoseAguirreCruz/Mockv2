@@ -321,35 +321,6 @@ nav {
   font-size: 30px;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  overflow-y: auto; 
-}
-
-.modal-content {
-  position: relative; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 600px;
-  min-height: 100px; 
-  background: linear-gradient(-45deg, #ff0000, #000000, #ff0000, #000000);
-  background-size: 400% 400%;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  animation: gradientBG 15s ease infinite;
-  overflow: hidden; 
-}
-
 @keyframes gradientBG {
   0% {
     background-position: 0 50%;
@@ -405,7 +376,44 @@ nav {
   cursor: pointer;
 }
 
-/* Responsive adjustments */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow-y: auto; 
+}
+
+.modal-content {
+  position: fixed; 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  min-height: 100px;
+  background: linear-gradient(-45deg, #ff0000, #000000, #ff0000, #000000);
+  background-size: 400% 400%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: gradientBG 15s ease infinite;
+  overflow: hidden;
+  max-height: 80vh;
+  overflow-y: auto; 
+}
+
+@media (max-height: 480px) {
+  .modal-content {
+    max-height: calc(100vh - 40px);
+    overflow-y: auto; 
+  }
+}
+
 @media (max-width: 600px) {
   .modal-content {
     width: 95%;
